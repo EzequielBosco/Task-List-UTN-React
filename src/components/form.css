@@ -1,19 +1,19 @@
 form {
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  gap: 18px;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.096);
-  border-radius: 10px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 5px;
+  height: 50px;
+  border-radius: 20px;
+  box-shadow: 2px 3px 4px 0  rgb(143, 143, 143);
+  transition: 0.2s ease-in-out;
+  background: rgba(46, 46, 46, 0.842);
+  border: 1.5px solid white;
+  color:white;
+  padding: 10px 3rem;
+  margin: 10px;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 18px;
+  gap: 25px;
 }
 
 input {
@@ -21,10 +21,5 @@ input {
   border: none;
   border-radius: 10px;
   padding: 5px 15px;
-}
-
-.div-register {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+  font-size: 18px;
 }

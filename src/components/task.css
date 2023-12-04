@@ -9,14 +9,14 @@
     border: 1.5px solid white;
     color:white;
     padding: 10px 3rem;
-    margin: 10px;
     align-items: center;
 }
 
 .task-info {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 25px;
 }
@@ -30,6 +30,59 @@
     border: 1px unset rgb(22, 22, 22)
 }
 
+.div-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+span.check {
+    display: inline-block;
+    position: relative;
+    height: 1.9em;
+    width: 1.9em;
+    border: 3px solid #6473ff;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: .3s all;
+}
+
+span.check:hover {
+    background-color: rgba(235, 235, 235, 0.11);
+}
+
+label {
+    font-size: 1em;
+    cursor: pointer;
+}
+
+label input:checked ~ span {
+    box-shadow: 1px 1px 2px 0 #6473ff;
+}
+
+span.check:after {
+    content: "";
+    position: absolute;
+    border: solid white;
+    border-width: 0 0.30em 0.30em 0;
+    transform: rotate(45deg);
+    width: 0.50em;
+    height: 1em;
+    left: 0.6em;
+    top: 0.25em;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+label input:checked ~ span:after {
+    opacity: 1;
+}
+
 /* task LIST */
 .task-list {
     display: flex;
@@ -38,28 +91,4 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px;
-}
-
-/* BUTTON */
-.btn {
-    color: #ffffff;
-    padding: 8px 8px;
-    font-size: 16px;
-    border-radius: 15px;
-    background: rgb(26, 26, 26);
-    border: none;
-    transition: .4s ease-in-out;
-    margin-top: auto;
-    border: 1px solid white;
-}
-.btn:hover {
-    background-color: rgb(255, 255, 255);
-    color: black;
-    transform: translateY(0.05em);
-}
-      
-.btn:active {
-    box-shadow: none;
-    background-color: white;
-    transform: translateY(0);
 }

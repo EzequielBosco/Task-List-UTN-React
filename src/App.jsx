@@ -1,5 +1,6 @@
 // import { useState, useEffect } from 'react'
 import TaskContainer from './components/TaskContainer'
+import TaskForm from './components/TaskForm'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -27,9 +28,11 @@ function App() {
         </div>
         <button onClick={incrementar}>+</button>
       </div> */}
-      <div>
+      <>
+        <h1>Lista de Tareas</h1>
+        <TaskForm />
         <TaskContainer />
-      </div>
+      </>
     </>
   )
 }

@@ -1,28 +1,28 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import TaskList from './TaskList'
 
 const TaskContainer = () => {
-  const [tasks, setTasks] = useState([
-    { id: 1, name: 'Tarea 1', date: new Date() },
-    { id: 2, name: 'Tarea 2', date: new Date() }
-  ])
+  const [tasks, setTasks] = useState([])
 
-  const [purchaseComplete, setPurchaseComplete] = useState(false)
-
-  const handleClick = () => {
-    console.log(`¡Gracias por su compra!`)
-    setPurchaseComplete(true)
-    setTimeout(() => {
-      window.location.href = "/"
-    }, 2000)
-  }
+  useEffect(() => {
+    const storedTasks = localStorage.getItem('tasks')
+    if (storedTasks) {
+      const parsedTasks = JSON.parse(storedTasks, (key, value) => {
+        if (key === 'date') {
+          return new Date(value)
+        }
+        return value
+      })
+      setTasks(parsedTasks)
+    }
+  }, [])
 
   return (
     <div>
-      {!purchaseComplete ? (
-          <TaskList tasks={tasks} onClick={handleClick} />
+      {tasks && tasks.length > 0 ? (
+          <TaskList tasks={tasks} />
         ) : (
-          <p>¡Gracias por su compra!</p>
+          <h2>No hay tareas creadas...</h2>
       )}
     </div>
   )
