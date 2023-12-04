@@ -1,0 +1,65 @@
+/* TASK CARD */
+.card-task {
+    display: flex;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: 2px 3px 4px 0  rgb(143, 143, 143);
+    transition: 0.2s ease-in-out;
+    background: rgba(46, 46, 46, 0.842);
+    border: 1.5px solid white;
+    color:white;
+    padding: 10px 3rem;
+    margin: 10px;
+    align-items: center;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.task-info p, h2, h3 {
+    margin: 0;
+}
+
+.card-task:hover {
+    box-shadow: 0.1px 5px 10px 0px rgba(143, 143, 143, 0.753);
+    transform:translateY(-4px);
+    border: 1px unset rgb(22, 22, 22)
+}
+
+/* task LIST */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* BUTTON */
+.btn {
+    color: #ffffff;
+    padding: 8px 8px;
+    font-size: 16px;
+    border-radius: 15px;
+    background: rgb(26, 26, 26);
+    border: none;
+    transition: .4s ease-in-out;
+    margin-top: auto;
+    border: 1px solid white;
+}
+.btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transform: translateY(0.05em);
+}
+      
+.btn:active {
+    box-shadow: none;
+    background-color: white;
+    transform: translateY(0);
+}

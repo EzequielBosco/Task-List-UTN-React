@@ -1,0 +1,30 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 18px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.096);
+  border-radius: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+}
+
+input {
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
+.div-register {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
