@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Button } from './common/Button'
+import { Button } from '../common/Button'
 import './form.css'
 
-const TaskForm = () => {
+const TaskForm = ({ formRef }) => {
   const [tasks, setTasks] = useState([])
 
   const [taskInput, setTaskInput] = useState('')
@@ -46,7 +46,7 @@ const TaskForm = () => {
 
   return (
     <div className='div-form'>
-      <form onSubmit={handleTaskCreation}>
+      <form ref={formRef} onSubmit={handleTaskCreation}>
         <input
           type='text' 
           name='nombre' 

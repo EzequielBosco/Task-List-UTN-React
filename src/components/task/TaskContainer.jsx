@@ -18,13 +18,13 @@ const TaskContainer = () => {
   }, [])
 
   return (
-    <div>
+    <>
       {tasks && tasks.length > 0 ? (
           <TaskList tasks={tasks} />
         ) : (
           <h2>No hay tareas creadas...</h2>
       )}
-    </div>
+    </>
   )
 }
 

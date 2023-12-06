@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import "./task.css"
-import { Button } from "./common/Button"
+import { Button } from "../common/Button"
 
 const TaskItem = ({ id, name, date, completed }) => {
   const [isCompleted, setIsCompleted] = useState(completed !== undefined ? completed : false)
